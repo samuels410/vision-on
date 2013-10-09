@@ -21,6 +21,6 @@ module ApplicationHelper
        end
      end
 
-     content_tag("div", links, :id => "breadcrumb")
+     content_tag("div", links, :id => "breadcrumb",:class=>"btn")
    end  
 end

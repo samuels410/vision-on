@@ -1,0 +1,130 @@
+@import "bootstrap";
+#logo {
+  float: left;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  &:hover {
+    color: green;
+    text-decoration: none
+  }
+  .logosize
+  {
+    height: 40px;
+
+    width:80px;}
+
+
+  DIV#breadcrumb {
+    float: left;
+  }
+
+  DIV#action_links {
+    float: right;
+    clear: right;
+  }
+}
+
+.navbar-inner, #footer {
+  background: url("../assets/header-footer.png");
+
+}
+
+#footer{
+  color: white;
+  text-align: center;
+  bottom: 0;
+}
+#content {
+  padding: 75px 0;
+  background: url("../assets/content.png");
+}
+
+.alert
+{
+  text-align: center;
+  padding-top: 25px
+}
+.container-fluid{
+  padding-right: 0px;
+  padding-left: 0px;}
+.carousel-control.left{
+  left: 0px;
+  margin-top: 93px;
+}
+.carousel-control.right {
+  right: 0px;
+  margin-top: 93px;
+}
+
+#all_content{
+  margin-top: 34px;
+}
+.container-fluid{
+  border-bottom: 1px solid #ddd;
+}
+
+#footer{
+  text-align: left;
+  bottom:0;
+  width:100%;
+}
+
+.twitter {
+  display:block;
+  background:transparent url('../assets/social-icons/Active/Twitter.png') center top no-repeat;
+  width: 56px;
+  height: 56px;
+}
+
+.twitter:hover {
+  background-image: url('../assets/social-icons/Hover/Twitter.png');
+  width: 56px;
+  height: 56px;
+}
+
+.gmail {
+  display:block;
+  background:transparent url('../assets/social-icons/Active/Google +.png') center top no-repeat;
+  width: 56px;
+  height: 56px;
+}
+
+.gmail:hover {
+  background-image: url('../assets/social-icons/Hover/Google +.png');
+  width: 56px;
+  height: 56px;
+}
+
+.facebook {
+  display:block;
+  background:transparent url('../assets/social-icons/Active/Facebook.png') center top no-repeat;
+  width: 56px;
+  height: 56px;
+}
+
+.facebook:hover {
+  background-image: url('../assets/social-icons/Hover/Facebook.png');
+  width: 56px;
+  height: 56px;
+}
+
+ .navbar-inner:hover #logo img{
+   width: 150px;
+   height: 100px;
+   transition: 0.5s ease-in-out;
+}
+
+#logo img{
+  width: 71px;
+  height: 50px;
+  transition: 0.5s ease-in-out;
+}
+
+.img-polaroid:hover .thumbnail img{
+  height: 201px;
+  transition: 0.5s ease-in-out;
+}
+.thumbnail:hover{
+  background-color: whitesmoke;
+}

@@ -1,14 +1,22 @@
-<div id="multipleimages">
-<% for collection in @collections %>
-	<div class="thumb">
-		<h3><%= link_to collection.title, collection %></h3>
-		<%= link_to (image_tag collection.albums.find(:first).photos.first.file.collection.url ), collection_path(collection) unless collection.albums.empty? || collection.albums.find(:first).photos.empty? %>
-	</div>
-<% end %>
+<%= render 'layouts/slider' %>
+<h3 id="galary" style="text-align: center">The Galary</h3> <br>
+<div class="container">
+  <div class="row">
+      <% for collection in @collections %>
+      <div class="span4">
+        <div class="thumbnail" style=" text-align: center; margin-top: 10px;">
+          <%= link_to (image_tag collection.albums.first.photos.first.file.collection.url ,:class=>"img-polaroid",:style=>"margin-top: 15px;"),
+                collection_path(collection) unless collection.albums.empty? || collection.albums.first.photos.empty? %>
+
+          <h4><%= link_to collection.title, collection %></h4>
+        </div>
+      </div>
+      <% end %>
+    </div>
 </div>
 
 <%= content_for :action_links do %>
-<% if has_role?("admin") %>
-<%= link_to "New collection", new_collection_path %>
-<% end %>
+    <% if has_role?("admin") %>
+        <%= link_to "New collection", new_collection_path ,:class=>"btn"%>
+    <% end %>
 <% end %>

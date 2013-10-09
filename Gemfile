@@ -45,3 +45,14 @@ gem "mini_magick"
 # -- EXIF
 # Mini exif tool. Can be disabled. Remove exif_read and exif_write filters in photo model
 gem "mini_exiftool_vendored"
+gem 'bootstrap-sass'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'jquery-rails'
+
+group :assets do
+  gem 'sass-rails',   '3.2.5'
+  gem 'coffee-rails', '3.2.2'
+  gem 'uglifier', '1.2.3'
+end
+

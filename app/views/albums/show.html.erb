@@ -48,17 +48,17 @@
 <%= content_for :action_links do %>
 <% if has_role?("admin") %>
 <% if params[:collection_id] %>
-<%= link_to "PDF", collection_album_path(params[:collection_id],@album, :format => 'pdf') ,:class=>"btn"%> |&nbsp;
-<%= link_to "Edit album", edit_collection_album_path(params[:collection_id],@album),:class=>"btn" %> |&nbsp;
-<%= link_to "Edit all photos", edit_multiple_collection_album_photos_path(params[:collection_id],@album,:class=>"btn") %> |&nbsp;
-<%= link_to "Edit untouched photos", untouched_collection_album_photos_path(params[:collection_id], @album,:class=>"btn") %> |&nbsp;
-<%= link_to "Add photos", upload_collection_album_photos_path(params[:collection_id], @album,:class=>"btn") %>
+<%= link_to "PDF", collection_album_path(params[:collection_id],@album, :format => 'pdf') ,:class=>"link"%> |&nbsp;
+<%= link_to "Edit album", edit_collection_album_path(params[:collection_id],@album),:class=>"link" %> |&nbsp;
+<%= link_to "Edit all photos", edit_multiple_collection_album_photos_path(params[:collection_id],@album,:class=>"link") %> |&nbsp;
+<%= link_to "Edit untouched photos", untouched_collection_album_photos_path(params[:collection_id], @album,:class=>"link") %> |&nbsp;
+<%= link_to "Add photos", upload_collection_album_photos_path(params[:collection_id], @album,:class=>"link") %>
 <% else %>
-<%= link_to "PDF", album_path(@album, :format => 'pdf',:class=>"btn") %> |&nbsp;
-<%= link_to "Edit album", edit_album_path(@album) ,:class=>"btn"%> |&nbsp;
-<%= link_to "Edit all photos", edit_multiple_album_photos_path(@album),:class=>"btn" %> |&nbsp;
-<%= link_to "Edit untouched photos", untouched_album_photos_path(@album) ,:class=>"btn"%> |&nbsp;
-<%= link_to "Add photos", upload_album_photos_path(@album),:class=>"btn" %>
+<%= link_to "PDF", album_path(@album, :format => 'pdf',:class=>"link") %> |&nbsp;
+<%= link_to "Edit album", edit_album_path(@album) ,:class=>"link"%> |&nbsp;
+<%= link_to "Edit all photos", edit_multiple_album_photos_path(@album),:class=>"link" %> |&nbsp;
+<%= link_to "Edit untouched photos", untouched_album_photos_path(@album) ,:class=>"link"%> |&nbsp;
+<%= link_to "Add photos", upload_album_photos_path(@album),:class=>"link" %>
 <% end %>
 
 <% end %>

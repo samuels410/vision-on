@@ -4,12 +4,12 @@
       <h4 id="logo"><%= link_to(image_tag("logo.png"), root_path) %></h4>
       <nav>
         <ul class="nav pull-right" style="margin-top: 20px;">
-          |<a href="#galary" id="galary-link" class="btn" >Collections</a>
+          |<a href="#galary" id="galary-link" class="link" >Collections</a>
           <li><%= breadcrumbs %></li>
           <%= yield :action_links %> |
           <% if current_user  %>
-                <%= link_to(current_user.name, 'account',:class=>"btn")%>  |
-                <%= link_to 'Logout', logout_path ,:class=>"btn"%>
+                <%= link_to(current_user.name, 'account')%>  |
+                <%= link_to 'Logout', logout_path%>
           <% end %>
         </ul>
       </nav>

@@ -29,9 +29,9 @@
 
 <%= content_for :action_links do %>
 <% if has_role?("admin") %>
-<%= link_to "PDF", collection_path(@collection, :format => 'pdf'),:class=>"btn" %> |&nbsp;
-<%= link_to "Edit collection", edit_collection_path(@collection) ,:class=>"btn"%> |
-<%= link_to "New album", new_collection_album_path(@collection),:class=>"btn" %>
+<%= link_to "PDF", collection_path(@collection, :format => 'pdf'),:class=>"link" %> |&nbsp;
+<%= link_to "Edit collection", edit_collection_path(@collection) ,:class=>"link"%> |
+<%= link_to "New album", new_collection_album_path(@collection),:class=>"link" %>
 <% end %>
 <% end %>
     </div>

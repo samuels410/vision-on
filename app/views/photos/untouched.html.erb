@@ -1,12 +1,17 @@
+<div class="container">
+  <div class="row">
 <%= form_for :photos, :url => update_multiple_photos_path, :html => { :method => :put } do |f| %>
 <% for photo in @photos %>
 <p>
 <%= f.fields_for photo do |p|%>
+                <div class="span3">
 	<%= render :partial => "photos/thumb", :locals => {:photo => photo } %>
 	<%= p.text_field :title, :index => photo.id %>
 	<%= p.text_field :tags, :index => photo.id, :value => photo.tag_list %>
+                </div>
 <% end%>
 </p>
 <% end%>
-  <p><%= f.submit "Submit" %></p>
+        </div>
+  <p><%= f.submit "Submit" ,class: "btn btn-primary" %>&nbsp;<%=link_to "Back", :back ,class: "btn"%></p>
 <% end %>

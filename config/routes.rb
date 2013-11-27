@@ -1,4 +1,7 @@
 Balder::Application.routes.draw do
+  resources :sliders
+
+
   resource :account, :controller => :users
   match "login", :to => "user_sessions#new", :as => :login
   match "authenticate", :to => "user_sessions#create", :as => :authenticate

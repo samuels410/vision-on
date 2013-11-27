@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Slider album selection</h3>
+  <%= form_for @slider, :url => slider_path do |f| %>
+      <%= f.error_messages %>
+      <%= f.collection_select :album_id, Album.order(:title), :id, :title,
+                                   :prompt => "- Select a album for slider-"%>
+      <%= f.submit "Update" ,:class=>"btn btn-primary"%>
+  <% end %>
+
+
+</div>
+

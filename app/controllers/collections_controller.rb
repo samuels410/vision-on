@@ -4,6 +4,7 @@ class CollectionsController < ApplicationController
 
   def index
     @collections = Collection.all
+    @album = Slider.first.album
     respond_to do |format|
       format.html
       format.json  { render :json => @collections }

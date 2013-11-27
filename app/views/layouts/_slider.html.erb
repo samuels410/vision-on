@@ -2,43 +2,29 @@
   <div class="container-fluid">
     <div id="heroSlider" class="carousel slide">
       <div class="carousel-inner" style="margin-top: -62px;">
-        <div class="active item">
+        <% @album.photos.each_with_index do |photo , i|%>
+             <% if i == 0 %>
+                <div class="active item">
+                  <% else  %>
+            <div class="item">
+              <%end  %>
+
           <div class="hero-unit">
             <div class="row-fluid">
               <div class="span4 marketting-info">
-                <h1>Photography</h1>
+                <h3><%= photo.title %></h3>
                 <p style="margin-top: 46px">
-                  Even though fixed in time, a photograph evokes as much feeling as that which comes from music or
-                  dance. Whatever the mode – from the snapshot to the decisive moment to multi-media montage – the
-                  intent and purpose of photography is to render in visual terms feelings and experiences that often
-                  elude the ability of words to describe. In any case, the eyes have it, and the imagination will
-                  always soar farther than was expected. – Ralph Gibson
+                  <%= photo.description %>
                 </p>
               </div>
               <div class="span8 thumbnail">
-                <%= image_tag("slider1.jpg",:style => "height: 526px;width: 100%;") %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="hero-unit">
-            <div class="row-fluid">
-              <div class="span4 marketting-info">
-                <h1>The better photographer</h1>
-                <p style="margin-top: 46px">
-                  A lot of photographers think that if they buy a better camera they’ll be able to take better
-                  photographs. A better camera won’t do a thing for you if you don’t have anything in your head or
-                  in your heart. – Arnold Newman
-                </p>
-              </div>
-              <div class="span8 thumbnail">
-                <%= image_tag("slider2.jpg",:style => "height: 526px;width: 100%;")%>
+                <%= image_tag(photo.file.url,:style => "height: 526px;width: 100%;") %>
               </div>
             </div>
           </div>
         </div>
 
+        <%end%>
         </div>
       </div>
       <a class="left carousel-control" href="#heroSlider" data-slide="prev">‹</a>

@@ -8,6 +8,9 @@
           <li><%= breadcrumbs %></li>
           <%= yield :action_links %> |
           <% if current_user  %>
+                  <% if has_role?("admin") %>
+                      <%= link_to "Edit slider album", edit_slider_path(:slider) %>|
+                  <% end %>
                 <%= link_to(current_user.name, 'account')%>  |
                 <%= link_to 'Logout', logout_path%>
           <% end %>

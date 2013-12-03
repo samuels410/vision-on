@@ -1,10 +1,10 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 ruby '2.0.0'
 
-group :heroku do
-  #gem 'unicorn'
-  gem 'rails_12factor'
-end
+#group :heroku do
+#  #gem 'unicorn'
+#  gem 'rails_12factor'
+#end
 
 gem 'rails', '3.2.14'
 
